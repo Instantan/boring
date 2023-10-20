@@ -19,21 +19,6 @@ boring generate
 Generates, bundles, minifies .scss, .css, .ts, .js and .templ files
 
 ```bash
-boring test
-```
-'boring generate && go test'
-
-```bash
-boring run
-```
-'boring generate && go run .'
-
-```bash
-boring build
-```
-'boring generate && go build'
-
-```bash
 boring help
 ```
 Prints the help screen
