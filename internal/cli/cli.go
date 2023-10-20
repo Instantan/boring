@@ -20,22 +20,18 @@ func Run() {
 	case "generate":
 		p := NewCompilerPool(nil)
 		p.GenerateAssetsAndTempl()
-		os.Exit(1)
 	case "test":
 		p := NewCompilerPool(nil)
 		p.GenerateAssetsAndTempl()
 		p.TestGo()
-		os.Exit(1)
 	case "run":
 		p := NewCompilerPool(nil)
 		p.GenerateAssetsAndTempl()
 		p.RunGo()
-		os.Exit(1)
 	case "build":
 		p := NewCompilerPool(nil)
 		p.GenerateAssetsAndTempl()
 		p.BuildGo()
-		os.Exit(1)
 	case "help", "--help":
 		fmt.Print("boring is a tool that bundles sass, esbuild and templ\n\n")
 		fmt.Print("Usage:\n")
@@ -48,7 +44,6 @@ func Run() {
 		fmt.Print("For more informations visit https://github.com/Instantan/boring\n\n")
 	default:
 		fmt.Print("Command not supported.\nUse 'boring help' for a list of supported commands\n")
-		os.Exit(1)
 	}
 }
 
