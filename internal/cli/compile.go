@@ -76,18 +76,6 @@ func (p *CompilerPool) stopRunningGoProcess() {
 	}
 }
 
-func (p *CompilerPool) TestGo() {
-	p.stopRunningGoProcess()
-	fmt.Println("go test")
-	p.goProcess = exec.Command("go", "test")
-	p.goProcess.Stdout = os.Stdout
-	p.goProcess.Stderr = os.Stderr
-	p.goProcess.Stdin = os.Stdin
-	if err := p.goProcess.Start(); err != nil {
-		printError(err)
-	}
-}
-
 func (p *CompilerPool) RunGo() {
 	p.stopRunningGoProcess()
 	fmt.Println("go run .")

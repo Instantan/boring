@@ -20,26 +20,11 @@ func Run() {
 	case "generate":
 		p := NewCompilerPool(nil)
 		p.GenerateAssetsAndTempl()
-	case "test":
-		p := NewCompilerPool(nil)
-		p.GenerateAssetsAndTempl()
-		p.TestGo()
-	case "run":
-		p := NewCompilerPool(nil)
-		p.GenerateAssetsAndTempl()
-		p.RunGo()
-	case "build":
-		p := NewCompilerPool(nil)
-		p.GenerateAssetsAndTempl()
-		p.BuildGo()
 	case "help", "--help":
 		fmt.Print("boring is a tool that bundles sass, esbuild and templ\n\n")
 		fmt.Print("Usage:\n")
 		fmt.Print("\tboring\t\t\tHot code reloading of .scss, .css, .ts, .js, .templ and .go files\n")
 		fmt.Print("\tboring generate\t\tGenerates, bundles, minifies .scss, .css, .ts, .js and .templ files\n")
-		fmt.Print("\tboring test\t\t'boring generate && go test'\n")
-		fmt.Print("\tboring run\t\t'boring generate && go run .'\n")
-		fmt.Print("\tboring build\t\t'boring generate && go build'\n")
 		fmt.Print("\tboring help\t\tPrints the help screen\n\n")
 		fmt.Print("For more informations visit https://github.com/Instantan/boring\n\n")
 	default:
